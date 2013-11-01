@@ -141,5 +141,9 @@ class Fraccion #Clase Fraccion
 		end
 		return false
 	end
+
+	 def <=> (object)
+        	  self.flotante<=>object.flotante    
+    	 end
 		
 end
