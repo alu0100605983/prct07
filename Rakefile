@@ -1,14 +1,15 @@
 
 $:.unshift File.dirname(__FILE__) + 'lib'
+$:.unshift '.lib', './test'
 
 require 'rspec/core/rake_task'
 Rspec::Core::RakeTask.new
-task :default => :spec
+task :default => :tu
 
 
 
 desc "Pruebas unitaria de la clase fraccion"
-task :spec do
+task :tu do
 	sh "rspec -I. test/pruebas_spec.rb"
 end
 
